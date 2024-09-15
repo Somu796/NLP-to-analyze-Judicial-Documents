@@ -22,7 +22,7 @@ e. Use of Oversampling and Under Sampling
 3. [Saving Clean Data](#C.-**Importing-the-Cleaned-Data-from-.csv-files**)
 4. [Exploratory Data Analysis (EDA)](#D.-**Exploratory-Data-Analysis**)
 5. [Classification of Unbalamnced Data](#E.-**Classifiers-for-Unbalanced-Data**)
-6. [Classification of Balanced Data (Resampled Data)]()
+6. [Classification of Balanced Data (Resampled Data)](#-F.-Resampling:)
 
 
 # A. **Importing Libraries**
@@ -1848,9 +1848,9 @@ cm
 #X_balanced
 ```
 
-### F. Resampling:
+# F. Resampling:
 
-#### a. ***Over Sampling:***
+## a. ***Over Sampling:***
 
 
 ```python
@@ -2347,7 +2347,7 @@ print(accuracy_score(y_test, y_pred))
     0.5533980582524272
 
 
-#### b. ***Under Sampling:***
+## b. ***Under Sampling:***
 
 
 ```python
