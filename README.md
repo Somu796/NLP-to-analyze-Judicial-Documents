@@ -1,6 +1,24 @@
 # ***NLP to analyze Judicial Documents***
 *Kushagra Bhatnagar and Sudipta Kumar Hazra*
 
+*Abstract:* 
+This project try to explore different concepts of Machine Learning and Natural Languge Processing. Such as,
+a. Regular Expression;
+b. Exploratory Data Analysis;
+c. Building Classifiers using Bernoulli Naive Bayes, kNN, Logistic Regression, Decision Tree, Neural Networks;
+
+d. Feature Inference and Selection;
+
+e. Use of Oversampling and Under Sampling
+
+# Table of Contents
+1. [Importing Libraries](# A. **Importing Libraries**)
+2. [PDF Data Extraction and Pre-processing with Regular Expression](# B. **Extraction of Features (IPCs and Arm Acts)**)
+3. [Saving Clean Data](#C. **Importing the Cleaned Data from .csv files**)
+4. [Exploratory Data Analysis (EDA)](# D. **Exploratory Data Analysis**)
+5. [Classification of Unbalamnced Data](# E. **Classifiers for Unbalanced Data**)
+6. [Classification of Balanced Data (Resampled Data)]()
+
 
 # A. **Importing Libraries**
 
@@ -438,7 +456,7 @@ X_train.iloc[X_train.index<170].shape
 
 
 
-# E. Classifiers for Unbalanced Data
+# E. **Classifiers for Unbalanced Data**
 
 ### a. Bernoulli Naive Bayes
 
