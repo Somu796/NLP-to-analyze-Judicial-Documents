@@ -1848,9 +1848,9 @@ cm
 #X_balanced
 ```
 
-# F. Resampling:
+#F. Resampling
 
-## a. ***Over Sampling:***
+##a. ***Over Sampling:***
 
 
 ```python
