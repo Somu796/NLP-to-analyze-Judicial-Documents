@@ -2,12 +2,12 @@
 *Kushagra Bhatnagar and Sudipta Kumar Hazra*
 
 *Abstract:* 
-This project try to explore different concepts of Machine Learning and Natural Languge Processing. 
-
-Below are topics which were explored,
+This project try to explore different concepts of Machine Learning and Natural Languge Processing. Below are topics which were explored,
 
 a. Regular Expression;
+
 b. Exploratory Data Analysis; 
+
 c. Building Classifiers using Bernoulli Naive Bayes, kNN, Logistic Regression, Decision Tree, Neural Networks; 
 
 d. Feature Inference and Selection; 
