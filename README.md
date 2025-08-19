@@ -1,5 +1,4 @@
-# ***NLP to analyze Judicial Documents***
-*Kushagra Bhatnagar and Sudipta Kumar Hazra*
+*Sudipta Kumar Hazra and Kushagra Bhatnagar*
 
 *Abstract:* 
 
