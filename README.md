@@ -2,17 +2,19 @@
 
 *Abstract:* 
 
-The Indian judiciary, though reliable, struggles with severe delays due to millions of pending cases. This project applies Machine Learning and NLP to predict bail decisions from court “Order on Exhibit” documents. The process followed in this study is:
+<p>The Indian judiciary, though reliable, struggles with severe delays due to millions of pending cases. This project applies Machine Learning and NLP to predict bail decisions from court “Order on Exhibit” documents. The process followed in this study is:</p>
 
-a. Data Extraction with Regular Expressions: Extract IPC sections, judgment summaries, and bail decisions from Order on Exhibit documents using regular expressions.
-
-b. NLP-Based Data Cleaning & Text Preprocessing: Convert text into structured features suitable for machine learning modeling.
-
-c. Exploratory Data Analysis (EDA): Analyze feature distributions, identify patterns, and visualize relationships between IPC sections and bail outcomes.
-
-d. Modeling & Evaluation: Train classifiers including Naive Bayes, k-Nearest Neighbors, Logistic Regression, Decision Trees, and Neural Networks on imbalanced and resampled datasets.
-
-e. Prediction & Insights: Identify patterns in the data to predict “Bail” or “No Bail” decisions and evaluate model performance.
+<ol>
+  <li><strong>Data Extraction with Regular Expressions:</strong> Extract IPC sections, judgment summaries, and bail decisions from Order on Exhibit documents using regular expressions.</li>
+  
+  <li><strong>NLP-Based Data Cleaning & Text Preprocessing:</strong> Convert text into structured features suitable for machine learning modeling.</li>
+  
+  <li><strong>Exploratory Data Analysis (EDA):</strong> Analyze feature distributions, identify patterns, and visualize relationships between IPC sections and bail outcomes.</li>
+  
+  <li><strong>Modeling & Evaluation:</strong> Train classifiers including Naive Bayes, k-Nearest Neighbors, Logistic Regression, Decision Trees, and Neural Networks on imbalanced and resampled datasets.</li>
+  
+  <li><strong>Prediction & Insights:</strong> Identify patterns in the data to predict “Bail” or “No Bail” decisions and evaluate model performance.</li>
+</ol>
 <br>
 
 # Slides
