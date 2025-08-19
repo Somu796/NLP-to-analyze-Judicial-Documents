@@ -2,21 +2,30 @@
 *Kushagra Bhatnagar and Sudipta Kumar Hazra*
 
 *Abstract:* 
-This project try to explore different concepts of Machine Learning and Natural Languge Processing. Below are topics which were explored,
 
-a. Regular Expression;
+The Indian judiciary, though reliable, struggles with severe delays due to millions of pending cases. This project applies Machine Learning and NLP to predict bail decisions from court “Order on Exhibit” documents. The process followed in this study is:
 
-b. Exploratory Data Analysis; 
+a. Data Extraction with Regular Expressions: Extract IPC sections, judgment summaries, and bail decisions from Order on Exhibit documents using regular expressions.
 
-c. Building Classifiers using Bernoulli Naive Bayes, kNN, Logistic Regression, Decision Tree, Neural Networks; 
+b. NLP-Based Data Cleaning & Text Preprocessing: Convert text into structured features suitable for machine learning modeling.
 
-d. Feature Inference and Selection; 
+c. Exploratory Data Analysis (EDA): Analyze feature distributions, identify patterns, and visualize relationships between IPC sections and bail outcomes.
 
-e. Use of Oversampling and Under Sampling 
+d. Modeling & Evaluation: Train classifiers including Naive Bayes, k-Nearest Neighbors, Logistic Regression, Decision Trees, and Neural Networks on imbalanced and resampled datasets.
 
+e. Prediction & Insights: Identify patterns in the data to predict “Bail” or “No Bail” decisions and evaluate model performance.
 <br>
 
-# Table of Contents
+# Slides
+<br>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+  <iframe src="slides/NLP_Judicial_Slides.pdf" 
+          frameborder="0" width="100%" height="100%" 
+          allowfullscreen style="position:absolute; top:0; left:0;"></iframe>
+</div>
+<br>
+
+# Table of Contents for Code
 1. [Importing Libraries](#A.-**Importing-Libraries**)
 2. [PDF Data Extraction and Pre-processing with Regular Expression](#B.-**Extraction-of-Features-(IPCs-and-Arm-Acts)**)
 3. [Saving Clean Data](#C.-**Importing-the-Cleaned-Data-from-.csv-files**)
@@ -81,10 +90,9 @@ file_text_nobail = pd.DataFrame({
 }
 )
 
-fileloc = "C:/Users/kusha/Desktop/Case File/No Bail/"
+fileloc = "Case File/No Bail/"
 c = 0    #for no bail
 for i in range(1,171) :   #changed
-    fileloc = "C:/Users/kusha/Desktop/Case File/No Bail/"
     filename = i
     file = fileloc + str(filename) + ".pdf"
     raw = parser.from_file(file)
@@ -92,7 +100,8 @@ for i in range(1,171) :   #changed
     t1 = text.replace(u'\xad',"").lower().split()
 
     f = " ".join(t1)
-    #"indian penal code" in f
+    
+    # standardizing variations in the content
     k = f.replace("indian penal code" , "ipc")
     k = k.replace("i.p.c" , "ipc")
     k = k.replace(" r/w. section" , "rws")
@@ -103,9 +112,9 @@ for i in range(1,171) :   #changed
     k = k.replace(" r\w" , "rws")
     k = k.replace("read with section" , "rws")
 
-
     ls = ["u/s" , "u\s" , "us." , "u.s","section","under sec","sec"] #,"and"
     k1 = k
+
 ### LOOP FOR CHANGING TO UNDSEC
     for i in ls :
         if "arms act" in k:
@@ -116,6 +125,7 @@ for i in range(1,171) :   #changed
 ### KEEPING IPC IN DATASET
 #    rms = re.sub(r"[^a-zA-Z0-9 ]", "", k1.split("undsec")[-1])
 #    ipc_list = re.findall(r'\d{1,3}?[a-z]{1,2}|\d{1,3}', rms)
+
 ### KEEPING ARMS ACT
     if "arms act" in k:
         #aa_text = re.sub(r"[^a-zA-Z0-9 ]", "", k1.split("undsec")[-1])
@@ -132,10 +142,6 @@ for i in range(1,171) :   #changed
     temp_dict = {"IPC": ",".join(ipc_list),"ARMS ACT" : ",".join(aa_list), "CATEGORY" : c}
     file_text_nobail = file_text_nobail.append(temp_dict, ignore_index=True, sort=False)
 ```
-
-    2022-06-15 16:51:34,055 [MainThread  ] [WARNI]  Failed to see startup log message; retrying...
-
-
 
 ```python
 file_text_nobail.IPC[10]
@@ -164,7 +170,7 @@ file_text_bail = pd.DataFrame({
 
 c = 1    #for bail
 for i in range(1,345) :
-    fileloc = "C:/Users/kusha/Desktop/Case File/Bail/"
+    fileloc = "Case File/Bail/"
     filename = i
     file = fileloc + str(filename) + ".pdf"
     raw = parser.from_file(file)
@@ -173,7 +179,8 @@ for i in range(1,345) :
 
     f = " ".join(t1)
     f = f.split("following order")[0]
-    #"indian penal code" in f
+    
+    # standardizing variations in the content
     k = f.replace("indian penal code" , "ipc")
     k = k.replace("i.p.c" , "ipc")
     k = k.replace(" r/w. section" , "rws")
@@ -251,15 +258,8 @@ for i in u :
 
 ```python
 uni_ipc = set(uni_ipc)
-```
-
-
-```python
 len(uni_ipc)
 ```
-
-
-
 
     148
 
